@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+}
+.todo-container{
+    background-color: #e29578;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.todo-container .add-task{
+    background-color: #006d77;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+}
+.todo-container .add-task input{
+    width: 98%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    position: relative;
+}
+.todo-container .add-task input:focus{
+    outline: none;
+}
+.todo-container .add-task .plus{
+    background-color: #83c5be ;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height:40px ;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 26%;
+    font-size: 30px;
+    font-weight: bold;
+    transition: transform 1s;
+    cursor: pointer;
+}
+.todo-container .add-task .plus:hover{
+    transform: rotate(90deg);
+}
+.todo-container .task-contant{
+    padding: 10px 20px;
+}
+.todo-container .task-contant > span{
+    display: block;
+    padding: 10px;
+    background-color: #fcf8f6;
+    border-radius: 5px;
+}
+.todo-container .task-contant > span:not(:last-child){
+    margin-bottom: 10px;
+}
+.todo-container .task-contant .task-box {
+    display: flex;
+    justify-content: space-between;
+}
+.todo-container .task-contant .task-box .delete{
+    display: inline-block;
+    background-color: red;
+    font-size: 12px;
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+.todo-container .task-contant .task-box.finished {
+    text-decoration: line-through;
+  }
+.todo-stats{
+    display: flex;
+    justify-content: space-between;
+}
+.todo-stats .tasks-count span,
+.todo-stats .tasks-completed span{
+    background-color:#ffddd2 ;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
